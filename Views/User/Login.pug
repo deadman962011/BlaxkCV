@@ -1,0 +1,21 @@
+extends ../layout/master
+
+block title
+ title Login
+
+block content 
+ h4 hello Login page
+ 
+ .container 
+  form(method='post', class='form-horizontal')
+   div.form-group
+    label Username: 
+    input.form-control(name='CVUserI', autofocus) 
+   div.form-group 
+    label Password: 
+    input.form-control(name='CVPassI', type='password') 
+   div.form-actions 
+     h4= _csrf
+     input(type='text',name='_csrf',value=_csrf) 
+     input.btn.btn-primary(type='submit', value='Login')
+ 

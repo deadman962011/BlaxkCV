@@ -1,0 +1,223 @@
+extends ../layout/master
+
+block title
+ title User
+
+block content 
+ h4 hello Login page
+ 
+ .container
+  .row
+   .UserCv
+    	.ExpCv
+		   h2.text-center Experians
+		  
+		   .ExpAdd
+		   
+		   .ExpOne
+		    h3 exp tie
+		    p exp descreptn
+		     .ExpSkl
+		      h4 Skills
+		      span item
+		      span item 
+		      span item 
+     button(data-toggle="modal" data-target="#AddExpModal") Create Experiance
+     button(data-toggle="modal" data-target="#AddEduModal") Create Education	   
+     button(data-toggle="modal" data-target="#AddSkillModal") Create 
+	  
+   .UserInfForm.col-sm-4
+    form.form-horizontal(method='post')
+     .form-group
+      .col-sm-8
+       input.form-control(name='FirstNameI' placeholder='First name input ', value=''+CV.CVFirstName)
+       
+     .form-group
+      .col-sm-4
+       input.form-control(name='LastNameI' placeholder='Last name input ', value=''+CV.CVLastName)
+		   
+		  .form-group
+		   .col-sm-4
+		    input.form-control(name='JobI' placeholder='Job input ', value=''+CV.CVJo 
+	 
+		    .form-group
+		     .col-sm-4
+		      select.form-control(name='GenderI' placeholder='Gender input ', value=''+CV.CVGend)
+		       option(value='0') Select Genr
+		       option(value='1') Ma 
+		       option(value='2') Feme
+		       option(value='3') Otr
+		 
+		    .form-group
+		     .col-sm-4
+		      textarea.form-control(name='PersonalInfI' placeholder='Personal information input' value='CV.CVPresonalInf')=CV.CVPresonalf
+		     
+		    .form-group
+		     .col-sm-4
+		      input.form-control(name='BirthDateI',type='date' value=''+CV.CVBirthDa)	
+		   .form-group
+		    .col-sm-4
+		     button.btn.btn-primary.SavePersonalInf Sa 	
+		 		
+	
+		 
+		  .UserCv.col-s8
+		 
+		   .Exv
+		    h2.text-center Experians
+		  
+		    .Expd
+		     h3 exp tie
+		     p exp descreptn
+		     .ExpSkl
+		      h4 Skil s 
+		      span im
+		      span it 
+		      span it 
+		 
+		 
+		 
+		 
+		 
+		  
+		  //Save Experiance Mol
+	 
+		  .modal.fade(id="AddExpModal" role="dialog" tabindex="-1)
+		     .modal-dialog(role="documen)
+		      .modal-contt
+		       .modal-hear
+		        h5.modal-title Add Experiance Mol
+		       .modal-by
+		        form.form-horizontal(method='pos)
+		         .form-group
+		          .col-sm-12
+		           input.form-control(name='ExpTitleI' placeholder='Experiance Title' requir)
+		         
+		         .form-group
+		          .col-sm-12
+		           textarea.form-control(name='ExpDescI' placeholder='Experiance Descreption' requir)
+ 
+		         .form-group
+		          .col-sm-12
+		           input.form-control(type='text' name='ExpFromI' placeholder='From'  onfocus="(this.type='date')" onblur="(this.type='text' 
+		 required)
+		         
+		         .form-group
+		          .col-sm-12
+		           input.form-control(type='text' name='ExpToI' placeholder='To'  onfocus="(this.type='date')" onblur="(this.type='text' 
+		 required)
+
+           .form-group
+            .col-sm-12
+             input(name='test')
+             label Skills:
+             .SkillSel 
+              .SkillSelOne
+               span test
+             
+		       
+		       .modal-footer
+		        button.btn.btn-primary.SaveExpBtn Save
+		        button.btn.btn-secondary( type="button" data-dismiss="modal") Cle
+		  
+		  //End Save Experiance Mol
+	 
+		  //Save Education Mol
+	 
+		  .modal.fade(id="AddEduModal" role="dialog" tabindex="-1)
+		     .modal-dialog(role="documen)
+		      .modal-contt
+		       .modal-hear
+		        h5.modal-title Add Education Mol
+		       .modal-by
+		        form.form-horizontal(method='pos)
+		         .form-group
+		          .col-sm-4
+		           input.form-control(name='EduTitleI' placeholder='Education Title' requir)
+		         
+		         .form-group
+		          .col-sm-4
+		           textarea.form-control(name='EduDescI' placeholder='Education Descreption' requir)
+ 
+		         .form-group
+		          .col-sm-4
+		           input.form-control(type='text' name='EduFromI' placeholder='From'  onfocus="(this.type='date')" onblur="(this.type='text' 
+		 requir)
+		         
+		         .form-group
+		          .col-sm-4
+		           input.form-control(type='text' name='EduToI' placeholder='To'  onfocus="(this.type='date')" onblur="(this.type='text' 
+		 requir)
+		         
+ 
+		       
+		       .modal-foor
+		        button.btn.btn-primary.SaveEduBtn Se
+		        button.btn.btn-secondary( type="button" data-dismiss="modal") Cle
+		 
+	 
+	 
+	 
+		  //End Save Education Mol
+ 
+		  //Save Education Mol
+	 
+		  .modal.fade(id="AddSkillModal" role="dialog" tabindex="-1)
+		     .modal-dialog(role="documen)
+		      .modal-contt
+		       .modal-hear
+		        h5.modal-title Add Skill Mol
+		       .modal-by
+		        form.form-horizontal(method='pos)
+		         .form-group
+		          .col-sm-4
+		           input.form-control(name='SkillTitleI' placeholder='Skill Title' requir)
+		         
+		         .form-group
+		          .col-sm-4
+		           textarea.form-control(name='SkillDescI' placeholder='Skill Descreption' requir)	
+		         .form-group
+		          .col-sm-4
+		           select.form-control(name='SkillValI' value=')
+		            option(value='0')0
+		            option(value='1')1
+		            option(value='2')2
+		            option(value='3')3
+		            option(value='4')4
+		            option(value='5')5
+		            option(value='6')6
+		            option(value='7')  7 
+		            option(value='8')8
+		            option(value='9')9
+		            option(value='10') 0
+		          
+		          
+		         .form-group
+		          .col-sm-4
+		           input.form-control(type='color',name='SkillColor)
+		         
+		         
+		       .modal-foor
+		        button.btn.btn-primary.SaveSkillBtn Se
+		        button.btn.btn-secondary( type="button" data-dismiss="modal") Cle
+		 
+	 
+	 
+	 
+		  //End Save Education Mol	
+	 	
+	 
+		block scrt	
+		 scri.
+ 
+		 script(src='/js/aj.j)
+	 
+	 
+	 
+	  
+  
+  
+  
+  
+  
+	  

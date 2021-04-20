@@ -1,0 +1,37 @@
+extends ../layout/master
+
+block title
+ title Register 
+
+block content 
+
+ h4 hello Register page
+ 
+ .container 
+  form(method='post', class='form-horizontal')
+   div.form-group
+    
+    input.form-control(name='CVMailI', type='mail' placeholder='E-mail Input' autofocus) 
+   div.form-group
+    input.form-control(name='CVUserI', placeholder='Username Input' autofocus) 
+   div.form-group
+    input.form-control(name='CVFirstI', placeholder='Firstname Input' autofocus) 
+   div.form-group
+    input.form-control(name='CVLastI', placeholder='Lastname Input' autofocus) 
+   div.form-group
+    input.form-control(name='CVJobI', placeholder='Job Input' autofocus) 
+   div.form-group
+    select.form-control(name='CVGenderI' value='0')
+     option(value='0') un sell
+     option(value='1') Male 
+     option(value='2') Female
+     option(value='3') Other
+   div.form-group
+    input.form-control(name='CVBirthDateI',type='date' placeholder='BirthDate Input' autofocus) 
+   div.form-group 
+    input.form-control(name='CVPassI', placeholder='Password Input' type='password') 
+   div.form-group 
+    input.form-control(name='CVPass2I', placeholder='Password Repeat' type='password') 
+   div.form-actions 
+     input.btn.btn-primary(type='submit', value='Register')
+ 
